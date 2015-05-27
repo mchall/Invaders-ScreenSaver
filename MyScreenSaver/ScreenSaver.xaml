@@ -1,0 +1,91 @@
+﻿<Window x:Class="MyScreenSaver.ScreenSaver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        WindowState="Maximized"
+        Background="White"
+        MouseMove="Window_MouseMove"
+        MouseDown="Window_MouseDown"
+        KeyDown="Window_KeyDown"
+        Cursor="None">
+    
+    <Window.Resources>
+        <Style x:Key="InvaderText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="48" />
+            <Setter Property="FontFamily" Value="./resources/#Invaders" />
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Direction="180" Color="LightGray" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Name="LayoutRoot">        
+        <Image Source="Resources\earth2_medium.jpg" Stretch="UniformToFill"/>
+
+        <TextBlock Name="warningText"
+                   TextAlignment="Center"
+                   Foreground="LimeGreen"
+                   FontFamily="./resources/#Cosmic Alien"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   FontSize="70">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="180" Color="LightGray" ShadowDepth="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <TextBlock Name="txtSpaceInvaders1" 
+                   Text="EEEEEEEEEEEEEEEE"
+                   Foreground="LimeGreen"
+                   Margin="0,55,0,0"
+                   Style="{StaticResource InvaderText}">
+            <TextBlock.RenderTransform>
+                <TranslateTransform/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock Name="txtSpaceInvaders2" 
+                   Text="CCCCCCCCCCCC"
+                   Foreground="LimeGreen"
+                   Margin="0,110,0,0"
+                   Style="{StaticResource InvaderText}">
+            <TextBlock.RenderTransform>
+                <TranslateTransform/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock Name="txtSpaceInvaders3" 
+                   Text="CCCCCCCCCCCC"
+                   Foreground="Cyan"
+                   Margin="0,165,0,0"
+                   Style="{StaticResource InvaderText}">
+            <TextBlock.RenderTransform>
+                <TranslateTransform/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock Name="txtSpaceInvaders4" 
+                   Text="AAAAAAAAAAA"
+                   Foreground="Cyan"
+                   Margin="0,220,0,0"
+                   Style="{StaticResource InvaderText}">
+            <TextBlock.RenderTransform>
+                <TranslateTransform/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock Name="txtSpaceInvaders5" 
+                   Text="AAAAAAAAAAA"
+                   Foreground="DarkMagenta"
+                   Margin="0,275,0,0"
+                   Style="{StaticResource InvaderText}">
+            <TextBlock.RenderTransform>
+                <TranslateTransform/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+    </Grid>
+</Window>
