@@ -15,6 +15,7 @@ namespace MyScreenSaver
             {
                 ScreenSaver win = new ScreenSaver();
                 win.WindowState = WindowState.Maximized;
+                win.Topmost = true;
                 win.Show();
                 return;
             }
